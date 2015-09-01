@@ -8,5 +8,9 @@
  * extension
  */
 module.exports = function fileExtension(name) {
-
+	var checkExt = name.lastIndexOf('.');
+	if (checkExt === -1){
+		return false;
+	}
+	return name.substring(checkExt + 1);
 };
